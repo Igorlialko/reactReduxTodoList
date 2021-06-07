@@ -3,8 +3,9 @@
   background: #fff;
 }
 
-h1 {
+.cards-h1 {
   text-align: center;
+  color: #000;
 }
 
 .cards__container {
@@ -14,6 +15,7 @@ h1 {
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
+
 }
 
 .cards__wrapper {
@@ -108,6 +110,7 @@ h1 {
 @media only screen and (min-width: 1024px) {
   .cards__items {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
