@@ -20,7 +20,7 @@ h1 {
 
 .complete {
   text-decoration: line-through;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .todo-form {
@@ -80,7 +80,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
+  color: #000000;
   background: linear-gradient(
     90deg,
     rgba(255, 118, 20, 1) 0%,
