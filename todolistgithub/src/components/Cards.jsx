@@ -15,7 +15,6 @@ const Cards = () => {
               label='Adventure in React'
               path='/services'
             />
-
           </ul>
         </div>
       </div>

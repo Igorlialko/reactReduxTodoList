@@ -1,4 +1,4 @@
-import {ADD_TODO, COMPLETE_TODO, EDIT_TODO, REMOVE_TODO} from "./actionTypes";
+import {ADD_JSON, ADD_TODO, COMPLETE_TODO, EDIT_TODO, REMOVE_TODO} from "./actionTypes";
 
 let nextTodoId = 0;
 
@@ -24,3 +24,17 @@ export const updateTodo = ( id= null , text='') => ({
   id,
   text
 })
+
+export const addJson = ({userId,
+                          id,
+                          title,
+                          completed
+                        }) => ({
+  type: ADD_JSON,
+  payload: {
+    userId,
+    id,
+    title,
+    completed
+  }
+});

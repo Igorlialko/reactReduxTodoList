@@ -20,9 +20,15 @@ const HeroSection = () => {
             setTodoList(removedArr);
         }
     };
+    const onAddBtnJSon = event => {
+        setTodoList(TodoList.concat(<ToDo
+            TodoList={'JSON'}
+            key={TodoList.length*2345}
+            className='todolist-items'/>));
+    };
     const onAddBtnClick = event => {
         setTodoList(TodoList.concat(<ToDo
-            removeTodoList={removeTodoList}
+            TodoList={'MY'}
             key={TodoList.length}
             className='todolist-items'/>));
     };
@@ -43,13 +49,20 @@ const HeroSection = () => {
             <h1>Todo List</h1>
             <p>What do you want to write?</p>
              <div className='hero-btns'>
+                 {TodoList.length === 0 ?
                  <Button
                       className='btns'
                       buttonStyle='btn--outline'
                       buttonSize='btn--large'
-                      children={TodoList.length===0?' GET STARTED':'ADD more TodoList'}
+                      children=' GET STARTED'
                       onClick={onAddBtnClick}
-                 />{a()}
+                 />:<Button
+                         className='btns'
+                         buttonStyle='btn--outline'
+                         buttonSize='btn--large'
+                         children='ADD more TodoList from JSONplaceholder'
+                         onClick={onAddBtnJSon}
+                     />}{a()}
              </div>
     </div>
         <div className='container-todolist' >

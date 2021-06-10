@@ -1,8 +1,9 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunkMiddlewear from "redux-thunk" ;
 import todoMap from "./reducers/todoMap";
+import apiReducer from "./reducers/jsonPlaceholder";
 
-const reducers = combineReducers({todos:todoMap})
+const reducers = combineReducers({todos:todoMap, api : apiReducer})
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
